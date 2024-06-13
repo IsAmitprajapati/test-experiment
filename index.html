@@ -8,20 +8,56 @@
 </head>
 <body>
     
-    <div class="wrapper">
+    <div class="old">
+        <div class="wrapper">
         
-        <div class="container">
-            <input type="text" id="getLink" />
-            <button id="sliceLInk">Get Link</button>
+            <div class="button-container">
+                <button id="clear">Clear</button>
+                <button id="paste">Paste</button>
+            </div>
+            <div class="container">
+                <input type="text" id="getLink" />
+                <button id="sliceLInk">Get Link</button>
+            </div>
+    
+            <input type="text" placeholder="name" id="name"/>
+    
+            <div class="Link">
+                <p class="link-display" id="displayLink"></p>
+                <button id="download">download</button>
+            </div>
+    
+           
         </div>
-
-        <input type="text" placeholder="name" id="name"/>
-
-        <div class="Link">
-            <p class="link-display" id="displayLink"></p>
-            <button id="download">download</button>
+    
+        <div id="display-image">
+            <img
+                id="image" 
+                download
+            />
         </div>
     </div>
+
+    <div class="multipleINput">
+        <input type="text" id="inputLink1" placeholder="enter url"/>
+        <input type="text" id="inputLink2" placeholder="enter url"/>
+        <input type="text" id="inputLink3" placeholder="enter url"/>
+        <input type="text" id="inputLink4" placeholder="enter url"/>
+        <input type="text" id="inputLink5" placeholder="enter url"/>
+        <input type="text" id="inputLink6" placeholder="enter url"/>
+    </div>
+    <button id="get">GET</button>
+    <button id="clearAll">Clear</button>
+    <div class="multipleImage">
+        <img id="image1" download />
+        <img id="image2" download />
+        <img id="image3" download />
+        <img id="image4" download />
+        <img id="image5" download />
+        <img id="image6" download />
+    </div>
+
+    
 
     <script src="index.js"></script>
 </body>

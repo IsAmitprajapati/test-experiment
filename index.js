@@ -3,16 +3,13 @@ const slicLink = document.getElementById('getLink')
 const displayLink = document.getElementById("displayLink")
 const download = document.getElementById("download")
 let fileExtension = ""
+const nameFile = document.getElementById("name")
 
 sliceLInk.addEventListener('click',()=>{
-    
-
     const splitLInk = slicLink.value.split("/")
     splitLInk.splice(5,1,"")
 
-    
     const joinLInk = splitLInk.join("/")
-
 
     displayLink.textContent = joinLInk
 
@@ -29,7 +26,7 @@ download.addEventListener('click',()=>{
           // Create a link element
           const link = document.createElement('a');
           link.href = URL.createObjectURL(blob);
-          link.download = 'filename.'+fileExtension;
+          link.download = nameFile+'.'+fileExtension;
 
           // Append the link to the body
           document.body.appendChild(link);

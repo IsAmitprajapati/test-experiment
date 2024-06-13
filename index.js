@@ -5,7 +5,7 @@ const download = document.getElementById("download")
 let fileExtension = ""
 const nameFile = document.getElementById("name")
 
-sliceLInk.addEventListener('click',()=>{
+function getLinkFormat(){
     const splitLInk = slicLink.value.split("/")
     splitLInk.splice(5,1,"")
 
@@ -17,9 +17,19 @@ sliceLInk.addEventListener('click',()=>{
 
     const file = splitLInk[splitLInk.length - 1].split(".")[1].split("?")[0]
     fileExtension = file
+
+    if(!fileExtension){
+        alert("Enter File Name")
+    }
+}
+
+sliceLInk.addEventListener('click',()=>{
+    getLinkFormat()
 })
 
 download.addEventListener('click',()=>{
+    getLinkFormat()
+
     fetch(displayLink.textContent)
         .then(response => response.blob())
         .then(blob => {
